@@ -36,20 +36,20 @@ void loop()
   long microsec = ultrasonic.timing();
   cmMsec = ultrasonic.convert(microsec, Ultrasonic::CM);
 
-  //SE DISTANCIA >16 LED VERDE, SE <10 E >5 LED AMARELO, SE <5 LED VERMELHO
+  //SE DISTANCIA >16 LED VERDE, SE <=16 E >8 LED AMARELO, SE <=8 LED VERMELHO
   if (cmMsec > 16)
   {
     digitalWrite(LEDverde,HIGH);
     digitalWrite(LEDvermelho,LOW);
     digitalWrite(LEDamarelo,LOW);
   }
-  else if (cmMsec < 16 && cmMsec >8)
+  else if (cmMsec <= 16 && cmMsec >8)
   { 
     digitalWrite(LEDverde,LOW);
     digitalWrite(LEDvermelho,LOW);
     digitalWrite(LEDamarelo,HIGH);
   }
-  else if (cmMsec < 8)
+  else if (cmMsec <= 8)
   {
     digitalWrite(LEDverde,LOW);
     digitalWrite(LEDvermelho,HIGH);
