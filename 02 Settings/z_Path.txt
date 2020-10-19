@@ -1,0 +1,4 @@
+Settings for Dark Theme in Arduino IDE
+
+theme.txt: C:\Program Files (x86)\Arduino\lib\theme
+default.xml: C:\Program Files (x86)\Arduino\lib\theme\syntax
